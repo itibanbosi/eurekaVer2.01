@@ -253,7 +253,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#525252" weight=18 blockId=eureka_relay block="単体_リレー |%mode||%pin|" group="3_ユーレカ装置"
+  //% color="#525252" weight=18 blockId=eureka_relay block="ﾘﾚｰ |%mode||%pin|" group="3_ユーレカ装置"
   export function eureka_relay(pin: eureka_IO, mode: onoff) {
     switch (pin) {
       case eureka_IO.Aﾎﾟｰﾄ:
