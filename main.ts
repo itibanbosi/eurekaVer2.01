@@ -35,7 +35,7 @@ enum L9110moter {
 }
 
 
-//% color="#74ad1d" block="ユーレカIO"
+//% color="#74ad1d" block="ユーレカIO_Ver2.01"
 namespace eureka_blocks {
   //% shim=DS18B20::Temperature
   //% group="4_センサの値"
@@ -184,7 +184,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#009A00"  weight=24 blockId=eureka_denkihuman block="人感センサ値 |%pin|" group="2_電気の利用ユニット"
+  //% color="#009A00"  weight=24 blockId=eureka_denkihuman block="人感ｾﾝｻ |%pin|" group="2_電気の利用ユニット"
   export function eureka_denkihuman(pin: eureka_denki): number {
     switch (pin) {
       case eureka_denki.Aﾎﾟｰﾄ:
@@ -196,7 +196,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#f5a142"  weight=23 blockId=eureka_denkiwhite block="ＬＥＤ |%mode| |%pin|" group="2_電気の利用ユニット"
+  //% color="#f5a142"  weight=23 blockId=eureka_denkiwhite block="LED |%mode| |%pin|" group="2_電気の利用ユニット"
   export function eureka_denkiwhite(mode: onoff, port: eureka_denki ) {
     switch (port) {
       case eureka_denki.Aﾎﾟｰﾄ:
@@ -214,12 +214,12 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#ff3d03" weight=19 blockId=eureka_buz_set block="ユーレカIOで音をならす" group="3_ユーレカ装置"
+  //% color="#ff3d03" weight=19 blockId=eureka_buz_set block="ﾕｰﾚｶIOで音をならす" group="3_ユーレカ装置"
   export function eureka_buz_set() {
     pins.analogSetPitchPin(AnalogPin.P8);
   }
 
-  //% color="#6041f1"  weight=23 blockId=eureka_L9110 block="モーターＬ |%mode| |%pin|" group="3_ユーレカ装置"
+  //% color="#6041f1"  weight=23 blockId=eureka_L9110 block="ﾓｰﾀｰL |%mode| |%pin|" group="3_ユーレカ装置"
   //% mode.min=-100 mode.max=100
   export function L9110driver(port: eureka_denki, mode: number) {
     switch (port) {
@@ -253,7 +253,8 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#525252" weight=18 blockId=eureka_relay block="ﾘﾚｰ |%mode||%pin|" group="3_ユーレカ装置"
+  //% color="#525252" weight=18 blockId=eureka_relay block="単_ﾘﾚｰ |%mode||%pin|" group="3_ユーレカ装置"
+  //% mode.min=0 mode.max=1
   export function eureka_relay(pin: eureka_IO, mode: onoff) {
     switch (pin) {
       case eureka_IO.Aﾎﾟｰﾄ:
@@ -276,7 +277,7 @@ namespace eureka_blocks {
         }
     }
   }
-  //% color="#40a6ff" weight=17 blockId=eureka_white block="単体_LED |%mode||%pin|" group="3_ユーレカ装置"
+  //% color="#40a6ff" weight=17 blockId=eureka_white block="単_LED |%mode||%pin|" group="3_ユーレカ装置"
   export function eureka_white(port: eureka_IO, mode: onoff) {
     switch (port) {
       case eureka_IO.Aﾎﾟｰﾄ:
@@ -300,7 +301,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#c3c900"  weight=8 blockId=eureka_light block="単体_光ｾﾝｻ |%pin|" group="4_センサの値"
+  //% color="#c3c900"  weight=8 blockId=eureka_light block="単_光ｾﾝｻ |%pin|" group="4_センサの値"
   export function eureka_light(pin: eureka_IO): number {
     switch (pin) {
       case eureka_IO.Aﾎﾟｰﾄ:
